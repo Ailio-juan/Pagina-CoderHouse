@@ -1,0 +1,777 @@
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/notoSans/NotoSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: merri;
+  src: url(../assets/fonts/Merriweather/Merriweather-Bold.ttf);
+}
+
+@keyframes mover-derecha-izquierda {
+  from {
+    transform: translateX(6rem);
+    -webkit-transform: translateX(6rem);
+    -moz-transform: translateX(6rem);
+    -ms-transform: translateX(6rem);
+    -o-transform: translateX(6rem);
+  }
+}
+
+@keyframes mover-izquierda-derecha {
+  from {
+    transform: translateX(-6rem);
+    -webkit-transform: translateX(-6rem);
+    -moz-transform: translateX(-6rem);
+    -ms-transform: translateX(-6rem);
+    -o-transform: translateX(-6rem);
+  }
+}
+
+body {
+  background: linear-gradient(#665687, #190933);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #190933;
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+
+}
+
+/*Inicio*/
+
+header .menuPrincipal .dropdown{
+  display: none;
+}
+header .menuPrincipal {
+  display: grid;
+  grid-template-columns: 10rem auto;
+}
+
+header .menuPrincipal .ordenar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+header .menuPrincipal .ordenar a {
+  color: white;
+  font-family: noto;
+}
+
+header .menuPrincipal .ordenar a:hover {
+  color: #665687;
+}
+
+
+
+
+.cajaventana {
+  display: flex;
+  justify-content: left;
+}
+
+.cajaventana a {
+  background-color: #190933;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+.dialogoModal {
+  position: fixed;
+  font-family: merri;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  -ms-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+}
+.dialogoModal h2{
+  display: flex;
+  justify-content: center;
+}
+
+.dialogoModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dialogoModal div {
+  width: 70%;
+  position: relative;
+  margin: 10% auto;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
+  border-radius: 1rem;
+  background: #665687;
+}
+
+.cerrar {
+  padding-top: 0.1rem;
+  background: black;
+  color: #FFFFFF;
+  line-height: 1.5rem;
+  position: absolute;
+  right: -0.5rem;
+  text-align: center;
+  top: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.inicio section h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: noto;
+}
+
+.inicio section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 10rem;
+  font-size: 1.5rem;
+  font-family: merri;
+  animation: mover-derecha-izquierda 2s 1;
+  -webkit-animation: mover-derecha-izquierda 2s 1;
+  color: white;
+  animation-fill-mode: forwards;
+}
+
+.inicio section .seccion img {
+  width: 100%;
+  height: 45rem;
+}
+
+.inicio section img {
+  width: 100%;
+  height: 25rem;
+}
+
+.inicio section .parte {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.inicio section .parte .infraestructura {
+  border: 0.1rem solid white;
+
+}
+
+.inicio section .parte .infraestructura h4 {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: noto;
+}
+
+.inicio section .parte .infraestructura p {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: white;
+  font-family: merri;
+  animation: mover-derecha-izquierda 3s 1;
+  -webkit-animation: mover-derecha-izquierda 3s 1;
+  animation-fill-mode: forwards;
+}
+
+/*Habitaciones*/
+.pagina-habitaciones section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+.pagina-habitaciones section .habitaciones {
+  padding: 0;
+  margin: 0;
+}
+
+
+.pagina-habitaciones section .habitaciones {
+  background-image: url(../assets/Img/fondoHabitaciones.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 35rem;
+
+}
+
+.pagina-habitaciones section .habitaciones h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 8rem;
+  align-items: center;
+  text-align: center;
+  font-family: noto;
+
+}
+
+.pagina-habitaciones section .habitaciones p {
+  display: flex;
+  justify-content: center;
+  padding: 0rem 10rem;
+  font-size: 1.5rem;
+  font-family: merri;
+  animation: mover-izquierda-derecha 2s 1;
+  -webkit-animation: mover-izquierda-derecha 2s 1;
+  animation-fill-mode: forwards;
+}
+
+.pagina-habitaciones section img {
+  width: 100%;
+  height: 30rem;
+}
+
+.pagina-habitaciones section .habitaciones h3,
+.pagina-habitaciones section .habitaciones p {
+  background-image: none;
+  background-color: transparent;
+  color: white;
+  -webkit-text-stroke: #190933  0.06rem;
+  font-family: noto;
+  display: flex;
+}
+
+
+
+.pagina-habitaciones .contenedor-habitaciones {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+
+.pagina-habitaciones .contenedor-habitaciones .doble-estandart,
+.pagina-habitaciones .contenedor-habitaciones .suite {
+  display: grid;
+  grid-template-columns: 30% auto;
+  margin-bottom: 1rem;
+}
+
+.pagina-habitaciones .doble-estandart h4 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white;
+  font-family: noto;
+
+}
+
+.pagina-habitaciones .doble-estandart p,
+.pagina-habitaciones .doble-superior p,
+.pagina-habitaciones .suite p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-family: merri;
+  animation: mover-derecha-izquierda 3s 1;
+  -webkit-animation: mover-derecha-izquierda 3s 1;
+  color: white;
+  animation-fill-mode: forwards;
+}
+
+.pagina-habitaciones .doble-superior {
+  display: grid;
+  grid-template-columns: auto 30%;
+  margin-bottom: 1rem;
+}
+
+.pagina-habitaciones .doble-superior h4 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white;
+  font-family: noto;
+}
+
+.pagina-habitaciones .suite h4 {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  color: white;
+  text-decoration: underline;
+  font-family: noto;
+}
+
+
+/*Contactenos*/
+.contactenos section {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.contactenos section h1 {
+  display: flex;
+  justify-content: center;
+  font-family: noto;
+  color: white;
+}
+
+.contactenos section iframe {
+  width: 100%;
+}
+
+.contactenos section #formulario h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: noto;
+}
+
+.contactenos form {
+  width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+.contactenos form label {
+  width: 72px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.contactenos form input[type="text"],
+.contactenos form input[type="email"],
+.contactenos form input[type="telefono"] {
+  width: 180px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+
+.contactenos form input[type="submit"] {
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  background-color: #000;
+}
+
+.contactenos form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contactenos textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  /*resize: vertical | horizontal | none | both*/
+  resize: none;
+  display: block;
+}
+
+
+
+
+
+/*Servicios*/
+
+
+
+
+
+.servicios section h1 {
+  display: flex;
+  justify-content: center;
+  font-family: noto;
+  color: white;
+  padding-top: 1rem;
+}
+
+
+.servicios section .nuestros-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: repeat(5, auto);
+}
+
+.servicios section .nuestros-servicios .card {
+  margin: 0.5rem;
+  margin-bottom: 1rem;
+  height: 90%;
+  background-color: #B084CC;
+}
+
+.servicios section .nuestros-servicios .card:hover {
+  box-shadow: 5px 5px 3px #190933;
+}
+
+
+
+
+
+
+/*Restaurante*/
+
+
+.restaurante section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+
+.restaurante .imagenRestaurante {
+  width: 100%;
+  height: 40rem;
+}
+
+.restaurante section .card img {
+  height: 15rem;
+}
+
+.restaurante section h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1rem;
+  color: white;
+  font-family: noto;
+}
+
+.restaurante section .platillos {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+
+}
+
+.restaurante section .platillos .card {
+  margin: 2rem;
+  background-color: #B084CC;
+}
+
+.restaurante section .platillos .card:hover {
+  box-shadow: 5px 5px 3px #190933;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+
+footer .menuPrincipal {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  margin-top: 2rem;
+}
+
+footer .menuPrincipal .ordenar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+footer .menuPrincipal .ordenar a {
+  color: white;
+  font-family: noto;
+}
+
+footer .menuPrincipal .ordenar a:hover {
+  color: #665687;
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: #190933;
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 15rem;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: white;
+  margin-bottom: 1.8rem;
+  font-size: 1.4rem;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 0.9rem;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 45px;
+  margin-right: 10px;
+  background-color: #0d2033;
+  color: #fff;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color:#665687 ;
+}
+
+
+.pie-pagina .grupo-2 {
+  background-color: #190933;
+  padding: 1rem 0.9rem;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 1rem;
+}
+
+.pie-pagina .cotizacion {
+  display: flex;
+  margin-top: 3rem;
+  text-decoration: none;
+  color:white;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1156px){
+  /*restaurante*/
+  .restaurante section .platillos {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  footer .menuPrincipal {
+    justify-content: center;
+  }
+
+  footer .menuPrincipal ul {
+    flex-direction: column;
+  }
+
+  .inicio section .parte {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+
+  .inicio section .seccion h3 {
+    border: 0.1rem solid black;
+
+  }
+
+  /*Habitaciones*/
+
+  .pagina-habitaciones .contenedor-habitaciones .doble-estandart,
+  .pagina-habitaciones .contenedor-habitaciones .suite,
+  .pagina-habitaciones .doble-superior {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .pagina-habitaciones .doble-superior {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+
+  /*Servicios*/
+
+  .servicios section .nuestros-servicios {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, auto);
+  }
+
+/*restaurante*/
+.restaurante section .platillos .card .card-text{
+  font-size: 1rem;
+}
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  header .menuPrincipal .ordenar {
+    display: none;
+  }
+  header .menuPrincipal .dropdown{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1rem;
+  }
+  header .menuPrincipal .dropdown a{
+    background-color: #665687;
+    color: #000;
+  }
+  header .menuPrincipal .dropdown ul{
+    background-color: #665687;
+  }
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+  footer .box p{
+    font-size: 0.8rem;
+  }
+  footer .menuPrincipal {
+    grid-template-columns: auto;
+  }
+
+  /*INICIO*/
+
+  .inicio section p {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+  .inicio section .parte .infraestructura p{
+    font-size: 0.8rem;
+  }
+
+  /*Habitaciones*/
+
+  .pagina-habitaciones section .habitaciones h3 {
+    margin-top: 1rem;
+  }
+  
+  .pagina-habitaciones section .habitaciones p {
+    font-size: 1.2rem;
+    padding: 0rem 1rem;
+
+  }
+
+  .pagina-habitaciones .doble-estandart p,
+  .pagina-habitaciones .doble-superior p,
+  .pagina-habitaciones .suite p {
+    font-size: 0.8rem;
+
+  }
+
+
+  /*servicios*/
+  .servicios section .nuestros-servicios {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .servicios section .nuestros-servicios .card {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .servicios section .nuestros-servicios .card .card-text{
+    font-size: 0.8rem;
+  }
+
+  /*Restaurante*/
+
+  .restaurante .imagenRestaurante {
+    height: 20rem;
+  }
+  .restaurante section .platillos {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(9, auto);
+  }
+  .restaurante section .platillos .card {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .restaurante section .platillos .card .card-text{
+    font-size: 0.8rem;
+  }
+}
